@@ -2,12 +2,10 @@
 
 /**
  * puts() - Function printing a string ending with new line
- * string parameter -  a phrase
+ * @"\"Programming is like building a multilingual puzzle" - string
  *
- * Function printing a string ending with new line
- * Return: 0
+ * Return: 0 if function works, 1 if not
  */
-
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
