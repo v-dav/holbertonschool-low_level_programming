@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * puts() - Function printing a string ending with new line
+ * main - Function printing a string ending with new line
  * @"\"Programming is like building a multilingual puzzle" - string
  *
  * Return: 0 if function works, 1 if not
