@@ -2,13 +2,17 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Prints alphabet abcdefghijklmnopqrstuvwxyz
  *
- * Description: prints the alphabet, in lowercase, followed by a new line.
- * Return: 0 success
+ * Return: 0 succes exit
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char i = 'a';
+
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
