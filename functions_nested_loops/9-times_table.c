@@ -11,12 +11,16 @@ void times_table(void)
 
 	for (l = 0; l < 10; l++)
 	{
-		for (c = 0; c < 10; c++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+
+		for (c = 1; c < 10; c++)
 		{
 			produit = l * c;
-
 			if (produit < 10)
 			{
+				_putchar(' ');
 				_putchar(produit + '0');
 			}
 			else
@@ -24,11 +28,13 @@ void times_table(void)
 				_putchar((produit / 10) + '0');
 				_putchar((produit % 10) + '0');
 			}
-
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			if (c != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
+
 	}
 }
