@@ -21,9 +21,9 @@ int _atoi(char *s)
 	t--;
 	while (j <= t)
 	{
-        	if (s[j] == '-' || s[j] == '+')
+        	if (s[j] == '-')
         	{
-            		sign = 1 - 2 * (s[j++] == '-');
+            		sign *= -1;
         	}
         
         	if (s[j] >= 48 && s[j] <= 57) 
