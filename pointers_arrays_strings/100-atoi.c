@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int t = 0, j = 0, sign = 1, nb_trouve = 0;
-	long int resultat = 0;
+	int resultat = 0;
 
 	while (s[t] != '\0')
 		t++;
