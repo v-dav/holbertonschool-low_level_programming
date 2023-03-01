@@ -20,6 +20,8 @@ char *cap_string(char *str)
 
 	while (i < size_str)
 	{
+		if (str[0] >= 97 && str[0] <= 122)
+			str[0] = (str[0] - 32);
 		if (str[i] >= 97 && str[i] <= 122)
 		{
 			while (j < 13)
