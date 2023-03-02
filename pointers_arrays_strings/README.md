@@ -1,4 +1,4 @@
-# C - Pointers, arrays and strings: project 1
+# C - Pointers, arrays and strings
 
 
 At the end of this project, I am expected to be able to  explain to anyone,  **without the help of Google**:
@@ -10,8 +10,9 @@ At the end of this project, I am expected to be able to  explain to anyone,  **w
 -   What are the differences between pointers and arrays
 -   How to use strings and how to manipulate them
 -   Scope of variables
-
-  
+-   What are pointers to pointers and how to use them
+-   What are multidimensional arrays and how to use them
+-   What are the most common C standard library functions to manipulate strings
 
 # Project files:
 
@@ -54,3 +55,21 @@ At the end of this project, I am expected to be able to  explain to anyone,  **w
 - 6-cap_string.c —> a function that capitalizes all words of a string.
 
 - 7-leet.c —> a function that encodes a string into 1337.
+
+# Project 3 files:
+
+- 0-memset.c —> a function that fills memory with a constant byte.
+
+- 1-memcpy.c —> a function that copies memory area
+
+- 2-strchr.c —> a function that locates a character in a string
+
+- 3-strspn.c —> a function that gets the length of a prefix substring
+
+- 4-strpbrk.c —> a function that searches a string for any of a set of bytes
+
+- 5-strstr.c —> a function that locates a substring
+
+- 7-print_chessboard.c —> a function that prints the chessboard.
+
+- 8-print_diagsums.c —> a function that prints the sum of the two diagonals of a square matrix of integers
