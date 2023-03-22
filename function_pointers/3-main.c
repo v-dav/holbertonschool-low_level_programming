@@ -18,6 +18,13 @@ int main(int argc, char *argv[])
 	char *op;
 	int (*op_func)(int, int) = NULL;
 
+	/* condition */
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
 	/*variables initialization */
 	a = atoi(argv[1]);
 	op = argv[2];
@@ -35,12 +42,6 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(100);
-	}
-
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
 	}
 
 	/*result */
