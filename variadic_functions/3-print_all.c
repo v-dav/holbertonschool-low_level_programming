@@ -20,10 +20,10 @@ void print_string(va_list ap)
 	char *s;
 
 	s = va_arg(ap, char*);
-	if (s != NULL)
-		printf("%s", s);
-	else
-		printf("%p", s);
+	if (s == NULL)
+		s = "(nil)";
+	
+	printf("%s", s);
 }
 
 /*----------------------------------*/
