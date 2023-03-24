@@ -42,7 +42,7 @@ void print_string(va_list ap)
 	char *s;
 
 	s = va_arg(ap, char*);
-	if (s == 0)
+	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
 }
