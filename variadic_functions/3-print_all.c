@@ -15,7 +15,7 @@ void print_char(va_list ap)
  * print_int - a function that prints an integer
  * @ap: argument parameter
  *
- * Return: Always 0.
+ * Return: nothing
  */
 void print_int(va_list ap)
 {
@@ -23,9 +23,10 @@ void print_int(va_list ap)
 }
 
 /**
- * main - check the code
+ * print_float - a function that prints an float
+ * @ap: argument parameter
  *
- * Return: Always 0.
+ * Return: nothing
  */
 void print_float(va_list ap)
 {
@@ -33,9 +34,10 @@ void print_float(va_list ap)
 }
 
 /**
- * main - check the code
+ * print_string - a function that prints a string
+ * @ap: argument parameter
  *
- * Return: Always 0.
+ * Return: nothing
  */
 void print_string(va_list ap)
 {
@@ -48,9 +50,10 @@ void print_string(va_list ap)
 }
 
 /**
- * main - check the code
+ * print_all - a function that prints anything
+ * @format: is a list of types of arguments passed to the function
  *
- * Return: Always 0.
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
