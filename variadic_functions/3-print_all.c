@@ -34,6 +34,7 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	int j = 0;
 	va_list ap;
+	char *s;
 
 	pf Print[] = {
 		{"c", print_char},
@@ -42,6 +43,7 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{'\0', NULL}
 	};
+	s = "";
 
 	va_start(ap, format);
 
@@ -51,8 +53,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *Print[j].op)
 			{
+				printf("%s", s);
 				Print[j].print(ap);
-				printf(", ");
+				s = ", ";
 			}
 			j++;
 		}
