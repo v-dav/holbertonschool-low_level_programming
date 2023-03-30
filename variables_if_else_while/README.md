@@ -1,4 +1,4 @@
-# C - Variables, if, else, while: Learning Objectives
+# :mortar_board:C - Variables, if, else, while: Learning Objectives
 
   
 
