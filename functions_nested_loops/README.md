@@ -1,4 +1,4 @@
-# C - Functions, nested loops: learning objectives
+# :mortar_board:C - Functions, nested loops: learning objectives
 
 At the end of this project, I am expected to be able to explain to anyone,  **without the help of Google**:
 
