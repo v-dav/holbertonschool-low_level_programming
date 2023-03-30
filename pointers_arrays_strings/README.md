@@ -1,4 +1,4 @@
-# C - Pointers, arrays and strings
+# :mortar_board:C - Pointers, arrays and strings
 
 
 At the end of this project, I am expected to be able to  explain to anyone,  **without the help of Google**:
