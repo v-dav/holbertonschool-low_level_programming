@@ -33,7 +33,7 @@ unsigned int binary_to_uint(const char *b)
 	int i = 0;
 
 	if (b == NULL)
-		return (0);
+		return (int_nb);
 
 	for (; i < size; i++)
 	{
