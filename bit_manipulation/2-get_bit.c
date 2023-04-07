@@ -15,7 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (n == 0)
 		return (0);
 	
-	j = n >> index; // nombre décalé de index
+	j = n >> index;
 	if (j & 1)
 		bit_value = 1;
 	else
