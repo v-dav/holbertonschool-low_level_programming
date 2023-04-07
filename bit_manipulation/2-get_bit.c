@@ -9,18 +9,21 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-    int bit_value;
-    unsigned long int j;
+	int bit_value;
+	unsigned long int j;
 
-    if (n == 0)
-        return (0);
-    
-    j = n >> index;
-    if (j & 1)
-        bit_value = 1;
-    else
-        bit_value = 0;
+	if (n == 0)
+		return (0);
 
-    return (bit_value);
-    
+	if (index >= sizeof(unsigned long int) * 8)
+        return (-1);
+
+	j = n >> index;
+	if (j & 1)
+		bit_value = 1;
+	else
+		bit_value = 0;
+
+	return (bit_value);
+
 }
