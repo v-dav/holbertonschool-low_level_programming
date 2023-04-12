@@ -67,8 +67,10 @@ int main(int argc, char **argv)
 	mode_t permissions;
 
 	if (argc != 3)
-		error_message("Usage: cp file_from file_to", 97, "");
-
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	buffer = create_buffer(1024);
 	open_flags = O_WRONLY | O_CREAT | O_TRUNC;
 	permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
@@ -76,7 +78,6 @@ int main(int argc, char **argv)
 	fd_dest = open(argv[2], open_flags, permissions);
 	if (fd_src == -1)
 		error_message("Error: Can't read from file", 98, argv[1]);
-
 	while ((bytes_read = read(fd_src, buffer, 1024)) > 0)
 	{
 		bytes_to_write = bytes_read;
@@ -99,6 +100,5 @@ int main(int argc, char **argv)
 	close_file(fd_src);
 	close_file(fd_dest);
 	free(buffer);
-
 	return (0);
 }
