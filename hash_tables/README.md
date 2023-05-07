@@ -19,3 +19,7 @@ At the end of this project, you are expected to be able to explain to anyone **w
 - 4-hash_table_get.c --> a function that retrieves a value associated with a key
 - 5-hash_table_print.c --> a function that prints a hash table
 - 6-hash_table_delete.c --> a function that deletes a hash table
+
+# Visual Representation of a Hash Table
+
+![Hash Table](https://user-images.githubusercontent.com/115344057/236668765-bb08c60e-d2a7-4903-aebc-234cfec64a8f.png)
