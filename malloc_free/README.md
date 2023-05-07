@@ -23,6 +23,6 @@ At the end of this project, I am expected to be able to  explain to anyone,  **w
 
 - 4-free_grid.c —> a function that frees a 2 dimensional grid previously created by your alloc_grid function.
 
-Grid Visual Representation
+# Grid Visual Representation
 
 ![Grid visual](https://user-images.githubusercontent.com/115344057/236667571-7d64566d-8bdf-4c8e-858b-769881899fdd.JPG)
