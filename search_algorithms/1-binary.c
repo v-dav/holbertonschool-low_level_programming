@@ -3,11 +3,11 @@
 /**
  * binary_search - function that performs a binary search on a given array
  * to find a specific value
- * 
+ *
  * @array: A pointer to the first element of the array to be searched.
  * @size: The size parameter is the number of elements in the array.
  * @value: The value we are searching for in the array.
- * 
+ *
  * Return: the index of the element in the array that matches the given value,
  * or -1 if the value is not found in the array.
  */
