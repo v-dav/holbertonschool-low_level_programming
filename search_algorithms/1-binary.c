@@ -11,8 +11,10 @@
  */
 void print_array(int *array, int start, int end)
 {
+	int i;
+
 	printf("Searching in array: ");
-	for (int i = start; i <= end; i++)
+	for (i = start; i <= end; i++)
 	{
 		if (i > start)
 			printf(", ");
@@ -35,10 +37,10 @@ void print_array(int *array, int start, int end)
  */
 int binary_search_recursive(int *array, int start, int end, int value)
 {
+	int mid = (start + end) / 2;
+
 	if (start > end)
 		return (-1); /* base case: value not found */
-
-	int mid = (start + end) / 2;
 
 	print_array(array, start, end);
 
