@@ -1,44 +1,69 @@
 #include "search_algos.h"
 
 /**
- * binary_search - function that performs a binary search on a given array
- * to find a specific value
+ * print_array - function that prints the elements of an array
+ * between two given indices
  *
- * @array: A pointer to the first element of the array to be searched.
- * @size: The size parameter is the number of elements in the array.
+ * @array: A pointer to the first element of the array to be printed
+ * @start: The starting index of the array from where the printing should begin
+ * @end: an integer that represents the index of the last element in the array
+ * that needs to be printed.
+ */
+void print_array(int *array, int start, int end)
+{
+	printf("Searching in array: ");
+	for (int i = start; i <= end; i++)
+	{
+		if (i > start)
+			printf(", ");
+		printf("%d", array[i]);
+	}
+	printf("\n");
+}
+
+/**
+ * binary_search_recursive - function that performs a binary search recursively
+ * on a given array to find a specific value.
+ *
+ * @array: a pointer to the array of integers being searched
+ * @start: The index of the first element in the array to be searched.
+ * @end: The index of the last element in the array being searched.
  * @value: The value we are searching for in the array.
  *
- * Return: the index of the element in the array that matches the given value,
- * or -1 if the value is not found in the array.
+ * Return: the index of the element in the array that matches the given value
+ * If the value is not found in the array, the function returns -1
+ */
+int binary_search_recursive(int *array, int start, int end, int value)
+{
+	if (start > end)
+		return (-1); /* base case: value not found */
+
+	int mid = (start + end) / 2;
+
+	print_array(array, start, end);
+
+	if (array[mid] == value)
+		return (mid); /*value found */
+	else if (array[mid] < value) /* search in the right half */
+		return (binary_search_recursive(array, mid + 1, end, value));
+	else /* search in the left half */
+		return (binary_search_recursive(array, start, mid - 1, value));
+}
+
+/**
+ * binary_search - a function performs a binary search on an array
+ *
+ * @array: A pointer to the first element of the array to be searched.
+ * @size: represents the number of elements in the array.
+ * @value: the integer value that we are searching for in the array.
+ * The binary search algorithm will try to find the index of this value
+ *
+ * Return: the result of calling the function `binary_search_recursive`
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int start = 0;
-	int end = size - 1;
-	int mid, i;
-
 	if (!array)
 		return (-1);
 
-	while (start <= end)
-	{
-		mid = (start + end) / 2;
-		printf("Searching in array: ");
-		for (i = start; i <= end; i++)
-		{
-			if (i > start)
-				printf(", ");
-			printf("%d", array[i]);
-		}
-		printf("\n");
-		if (array[mid] == value)
-			return (mid);
-
-		if (array[mid] < value)
-			start = mid + 1;
-
-		else
-			end = mid - 1;
-	}
-	return (-1);
+	return (binary_search_recursive(array, 0, size - 1, value));
 }
